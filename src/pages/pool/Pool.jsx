@@ -4,7 +4,7 @@ export default class Pool extends Component {
     render() {
         return (
             <div>
-                POOL
+                POOL VBBBBBB
             </div>
         )
     }
