@@ -1,0 +1,63 @@
+body {
+  min-height: 100vh;
+  background-position: 0px -30vh;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 159, 0, 0.1) 0%,
+    rgba(33, 36, 41, 0) 100%
+  );
+}
+html {
+  color: rgb(255, 255, 255);
+  background-color: rgb(28, 55, 85);
+}
+.btn-black {
+  background-color: #1c2f48;
+  border: 1px solid rgba(21, 61, 111, 0.44);
+  color: rgb(255, 159, 0);
+  font-size: 16px;
+  border-radius: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-black:hover,
+.btn-black:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  border: 1px solid rgb(230, 143, 0);
+  color: rgb(230, 143, 0);
+  background-color: #1c2f48;
+  box-shadow: none;
+}
+.btn-yellow {
+  height: 35px;
+  background-color: rgb(255, 159, 0);
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.5rem;
+  border-color: rgb(255, 159, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-yellow:hover,
+.btn-yellow:focus,
+.btn-yellow.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-yellow.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-yellow.btn-primary.dropdown-toggle:focus {
+  outline: none;
+  background-color: rgb(86, 90, 105);
+  border-color: rgb(86, 90, 105);
+  box-shadow: none;
+}
+.btn-yellow svg {
+  height: 20px;
+  width: 20px;
+}
+.btn-yellow svg path {
+  stroke: #fff;
+}

@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  top: 0px;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 2;
+  background-color: transparent !important;
+  height: 81px;
+}
+.navbar a.navbar-brand {
+  width: 11%;
+  img {
+    width: 100%;
+  }
+}
+.navbar a.navbar-brand:hover img {
+  transform: rotate(-5deg);
+  transition: transform 0.3s ease 0s;
+}
+.navbar-expand .navbar-nav a {
+  color: rgb(195, 197, 203);
+  font-weight: 500;
+  border-radius: 12px;
+  margin: 0px 12px;
+  font-size: 1rem;
+}
+.navbar-expand .navbar-nav a.active {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
