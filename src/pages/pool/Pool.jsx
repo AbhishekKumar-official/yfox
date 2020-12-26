@@ -3,6 +3,7 @@ import advimg from '../../images/adv-1.png'
 import liquiditybgimg from '../../images/liquidity-rewards-img.png'
 import liquiditybggradient from '../../images/liquidity-rewards-noise.png'
 import advimg2 from '../../images/adv-2.png'
+import {Link} from "react-router-dom"
 import './Pool.scss'
 
 class Pool extends Component {
@@ -28,8 +29,8 @@ class Pool extends Component {
                             <div className="liquidity-row-1">
                                 <label>Your liquidity</label>
                                 <div className="btn-wrap">
-                                    <button className="btn btn-stroke mr-2">Create a pair</button>
-                                    <button className="btn btn-yellow">Add Liquidity</button>
+                                    <Link to="/create/ETH" className="btn btn-stroke mr-2">Create a pair</Link>
+                                    <Link to="/add/ETH" className="btn btn-yellow">Add Liquidity</Link>
                                 </div>
                             </div>
                             <div className="liquidity-row-2">
