@@ -5,6 +5,7 @@ import Swap from "./pages/swap/Swap"
 import Pool from "./pages/pool/Pool"
 import CreateETH from "./pages/ETH/CreateETH"
 import AddETH from "./pages/ETH/AddETH"
+import Find from "./pages/Import/Find"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./App.css"
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
         <Route exact path="/pool" component={Pool}/>
         <Route exact path="/create/ETH" component={CreateETH}/>
         <Route exact path="/add/ETH" component={AddETH}/>
+        <Route exact path="/find" component={Find}/>
       </Switch>
     </div>
     )

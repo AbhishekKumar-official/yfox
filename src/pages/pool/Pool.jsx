@@ -38,7 +38,7 @@ class Pool extends Component {
                             </div>
                             <div className="liquidity-row-3">
                             Don't see a pool you joined?
-                            <a id="import-pool-link" href="javascript:void(0)">Import it.</a>
+                            <Link to="/find" id="import-pool-link">Import it.</Link>
                             </div>
                         </div>
                     </div>
