@@ -68,6 +68,9 @@ html {
 .btn.disabled, .btn:disabled{
   cursor: default !important;
 }
+.tooltip.show {
+  opacity: 1;
+}
 .custom-tooltip{ 
   position: relative; 
   opacity: 1;
