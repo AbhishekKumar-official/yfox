@@ -61,3 +61,6 @@ html {
 .btn-yellow svg path {
   stroke: #fff;
 }
+.btn.disabled, .btn:disabled{
+  cursor: default !important;
+}
