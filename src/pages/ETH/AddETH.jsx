@@ -4,7 +4,9 @@ import ethicon from '../../images/eth-icon.png'
 import advimg2 from '../../images/adv-2.png'
 import ConnectToAWalletModal from "../../components/Modals/ConnectToAWalletModal"
 import EthAndSelectModal from "../../components/Modals/EthAndSelectModal"
+
 import './AddETH.scss'
+import { Link } from 'react-router-dom'
 
 class AddETH extends Component {
     render() {
@@ -16,9 +18,9 @@ class AddETH extends Component {
                 <div className="wallet-container">
                     <div className="wallet-picker">
                         <div className="top-content">
-                        <a href="javascript:void(0)">
+                        <Link to="/pool" href="javascript:void(0)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-kQsIoO fhNIBC"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                        </a>
+                        </Link>
                         <span>Add Liquidity</span>
                         <a href="javascript:void(0)" className="question-mark">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>

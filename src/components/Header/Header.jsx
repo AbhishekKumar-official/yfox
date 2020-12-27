@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Navbar,Nav,Button,FormControl,NavDropdown,Form,Dropdown,Popover} from 'react-bootstrap';
+import { Navbar,Nav,Button,FormControl,NavDropdown,Form,Dropdown,Popover,OverlayTrigger } from 'react-bootstrap';
 import ConnectToAWalletModal from "../Modals/ConnectToAWalletModal"
 import logo from "../../images/logo.png"
 import Overlay from 'react-bootstrap/Overlay'
@@ -87,6 +87,7 @@ class Header extends Component {
           target={target}
           placement="bottom"
           containerPadding={20}
+          trigger='hover'
         >
           <Popover id="popover-contained">
             <Popover.Title as="h3">Popover bottom</Popover.Title>
