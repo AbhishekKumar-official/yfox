@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import advimg from '../../images/adv-1.png'
 import ethicon from '../../images/eth-icon.png'
 import advimg2 from '../../images/adv-2.png'
+import {Link} from "react-router-dom"
+import { OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
 import './Find.scss'
 
 class Find extends Component {
@@ -14,13 +16,25 @@ class Find extends Component {
                 <div className="wallet-container">
                     <div className="wallet-picker">
                         <div className="top-content">
-                        <a href="javascript:void(0)">
+                        <Link to="/pool" href="javascript:void(0)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-kQsIoO fhNIBC"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                        </a>
+                        </Link>
                         <span>Import Pool</span>
-                        <a href="javascript:void(0)" className="question-mark">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                        </a>
+                        <OverlayTrigger
+                        placement="right"
+                        overlay={
+                        <Tooltip>
+                            Tooltip on <strong>Top</strong>.
+                        </Tooltip>
+                                }
+                                    >
+                            
+                                    <a href="javascript:void(0)" className="question-mark">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                                </a>
+                                
+                        </OverlayTrigger>
+                       
                         </div>
                         <div className="center-content">
                             <div className="center-row">

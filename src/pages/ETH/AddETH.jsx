@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import advimg from '../../images/adv-1.png'
 import ethicon from '../../images/eth-icon.png'
+import { OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
 import advimg2 from '../../images/adv-2.png'
 import ConnectToAWalletModal from "../../components/Modals/ConnectToAWalletModal"
 import EthAndSelectModal from "../../components/Modals/EthAndSelectModal"
@@ -9,7 +10,20 @@ import './AddETH.scss'
 import { Link } from 'react-router-dom'
 
 class AddETH extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+            modalVisible:false
+        }
+    }
+    handleOpenModal = () => {
+        this.setState({
+          modalVisible:true
+        })
+      }
     render() {
+        const {modalVisible} = this.state
         return (
             <div className="addETH-container">
                 <div className="adv-img-container">
@@ -22,9 +36,21 @@ class AddETH extends Component {
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sc-kQsIoO fhNIBC"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                         </Link>
                         <span>Add Liquidity</span>
-                        <a href="javascript:void(0)" className="question-mark">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                        </a>
+                        <OverlayTrigger
+                        placement="right"
+                        overlay={
+                        <Tooltip>
+                            Tooltip on <strong>Top</strong>.
+                        </Tooltip>
+                                }
+                                    >
+                            
+                                    <a href="javascript:void(0)" className="question-mark">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                                </a>
+                                
+                        </OverlayTrigger>
+                        
                         </div>
                         <div className="center-content">
                             <div className="center-row">
@@ -65,6 +91,7 @@ class AddETH extends Component {
                 <a href="javascript:void(0)" className="btn btn-back-to-home">
                     <span>&nbsp;</span>
                 </a>
+                <ConnectToAWalletModal show={modalVisible} onHide={() => this.setState({modalVisible:false})} />
             </div>
         )
     }
