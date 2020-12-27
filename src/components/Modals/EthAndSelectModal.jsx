@@ -6,7 +6,13 @@ import EthSecondStep from "./EthSecondStep"
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 const EthAndSelectModal = (props) => {
     const [modalShow, setModalShow] = useState(false);
+    const [hideShow, setHideShow] = useState(false);
 
+const secStp = () =>{
+    props.handleSecondStep()
+    setModalShow(false)
+}
+    console.log("hideShow",hideShow);
     return (
               <div>
               
@@ -52,10 +58,11 @@ const EthAndSelectModal = (props) => {
                                   <span>ETH</span>
                   </li>
                 </ul>
-                <a href="javascript:void(0)" onClick={() => setModalShow(true)} className="select-list">Select a list</a>
+                
+                <a href="javascript:void(0)" onClick={() => {setModalShow(true);props.handleSecondStep()}} className="select-list">Select a list</a>
               </Modal.Body>
             </Modal>
-              <EthSecondStep show={modalShow} onHide={() => setModalShow(false)}/>
+              <EthSecondStep show={modalShow} onHide={() => {setModalShow(false);props.handleSecondStep()}} secStp={secStp}/>
               </div>
             );
           }

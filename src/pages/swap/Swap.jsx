@@ -38,6 +38,11 @@ class Swap extends Component {
             swap:!this.state.swap
         })
     }
+    handleSecondStep = () =>{
+        this.setState({
+            ethModal:!this.state.ethModal
+        })
+    }
     render() {
         const {modalVisible,selectTokenModal,ethModal,swap} = this.state;
         return (
@@ -114,7 +119,7 @@ class Swap extends Component {
                     <span>&nbsp;</span>
                 </a>
                 <ConnectToAWalletModal show={modalVisible} onHide={() => this.setState({modalVisible:false})} />
-                <EthAndSelectModal show={ethModal} onHide={() => this.setState({ethModal:false})}/>
+                <EthAndSelectModal show={ethModal} onHide={() => this.setState({ethModal:false})} handleSecondStep={this.handleSecondStep}/>
                 <EthAndSelectModal show={selectTokenModal} onHide={() => this.setState({selectTokenModal:false})}/>
             </div>
         )

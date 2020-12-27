@@ -4,10 +4,30 @@ import ethicon from '../../images/eth-icon.png'
 import advimg2 from '../../images/adv-2.png'
 import {Link} from "react-router-dom"
 import { OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
+import CommonModal from "../../components/Modals/CommonModal"
 import './Find.scss'
 
 class Find extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+            c_one:false,
+            c_two:false,
+        }
+    }
+    handlec_one = () => {
+        this.setState({
+            c_one:true
+        })
+      }
+    handlec_two = () => {
+        this.setState({
+            c_two:true
+        })
+      }
     render() {
+        const {c_one,c_two}=this.state
         return (
             <div className="find-container">
                 <div className="adv-img-container">
@@ -40,7 +60,7 @@ class Find extends Component {
                             <div className="center-row">
                         <div className="border-box">
                             <div className="btn-dropdown-wrap">
-                               <button className="btn-dropdown-from">
+                               <button onClick={this.handlec_one} className="btn-dropdown-from">
                                    <div className="d-flex align-items-center">
                                     <img src={ethicon} className="etch-icon" />
                                     <span>ETH</span>
@@ -54,7 +74,7 @@ class Find extends Component {
                         </button>
                         <div className="border-box">
                         <div className="btn-dropdown-wrap">
-                               <button className="btn-dropdown-from">
+                               <button onClick={this.handlec_two} className="btn-dropdown-from">
                                    <div className="d-flex align-items-center">
                                    Select a Token
                                     </div>
@@ -73,6 +93,8 @@ class Find extends Component {
                 <a href="javascript:void(0)" className="btn btn-back-to-home">
                     <span>&nbsp;</span>
                 </a>
+                <CommonModal show={c_one} onHide={()=>this.setState({c_one:false})}/>
+                <CommonModal show={c_two} onHide={()=>this.setState({c_two:false})}/>
             </div>
         )
     }
