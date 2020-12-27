@@ -44,8 +44,14 @@ html {
   align-items: center;
   justify-content: center;
 }
+.btn-yellow.btn-primary.focus, 
+.btn-yellow.btn-primary:focus{
+  background-color: rgb(255, 159, 0);
+  border-color: rgb(255, 159, 0);
+  color: #fff;
+  box-shadow: none;
+}
 .btn-yellow:hover,
-.btn-yellow:focus,
 .btn-yellow.btn-primary:not(:disabled):not(.disabled).active:focus,
 .btn-yellow.btn-primary:not(:disabled):not(.disabled):active:focus,
 .show > .btn-yellow.btn-primary.dropdown-toggle:focus, 
@@ -197,6 +203,7 @@ html {
   left: auto;
   top: 57px;
   padding: 0;
+  border: none;
 }
 .dropdown .dropdown-item{
   min-width: 130px;
