@@ -21,10 +21,10 @@ class Find extends Component {
                         </Link>
                         <span>Import Pool</span>
                         <OverlayTrigger
-                        placement="right"
+                        placement="left"
                         overlay={
-                        <Tooltip>
-                            Tooltip on <strong>Top</strong>.
+                        <Tooltip className="custom-tooltip">
+                            Use this tool to find pairs that don't automatically appear in the interface.
                         </Tooltip>
                                 }
                                     >
