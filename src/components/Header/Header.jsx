@@ -105,10 +105,10 @@ class Header extends Component {
               <div>
               <label>Slippage tolerance</label>
               <OverlayTrigger
-              placement="right"
+              placement="left"
               overlay={
               <Tooltip className="custom-tooltip">
-                Find a token by searching for its name or symbol or by pasting its address below.
+                Your transaction will revert if the price changes unfavorably by more than this percentage.
               </Tooltip>
               }
                   >
@@ -130,10 +130,10 @@ class Header extends Component {
               <div>
               <label>Transaction deadline</label>
               <OverlayTrigger
-              placement="right"
+              placement="left"
               overlay={
               <Tooltip className="custom-tooltip">
-                Find a token by searching for its name or symbol or by pasting its address below.
+                Your transaction will revert if it is pending for more than this long.
               </Tooltip>
               }
                   >
