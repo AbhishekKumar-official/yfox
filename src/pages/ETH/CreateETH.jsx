@@ -49,10 +49,10 @@ class CreateETH extends Component {
                         </Link>
                         <span>Create a pair</span>
                         <OverlayTrigger
-                            placement="right"
+                            placement="left"
                             overlay={
-                            <Tooltip>
-                                Tooltip on <strong>Top</strong>.
+                            <Tooltip className="custom-tooltip">
+                                When you add liquidity, you are given pool tokens representing your position. These tokens automatically earn fees proportional to your share of the pool, and can be redeemed at any time.
                             </Tooltip>
                             }
                                 >
