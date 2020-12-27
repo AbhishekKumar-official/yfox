@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { Navbar,Nav,Button,FormControl,NavDropdown,Form,Dropdown,Popover,OverlayTrigger } from 'react-bootstrap';
+import { Navbar,Nav,Button,FormControl,NavDropdown,Form,Dropdown,Popover } from 'react-bootstrap';
 import ConnectToAWalletModal from "../Modals/ConnectToAWalletModal"
 import logo from "../../images/logo.png"
 import Overlay from 'react-bootstrap/Overlay'
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import {NavLink} from "react-router-dom"
 import "./Header.component.scss"
 class Header extends Component {
@@ -103,9 +104,20 @@ class Header extends Component {
             <Popover.Content>
               <div>
               <label>Slippage tolerance</label>
-              <a href="javascript:void(0)">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-              </a>
+              <OverlayTrigger
+              placement="right"
+              overlay={
+              <Tooltip className="custom-tooltip">
+                Find a token by searching for its name or symbol or by pasting its address below.
+              </Tooltip>
+              }
+                  >
+          
+                  <a href="javascript:void(0)" class="question-mark">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                </a>
+              
+             </OverlayTrigger>
               </div>
               <div className="btn-wrap">
                 <button className="active">0.1%</button>
@@ -117,9 +129,21 @@ class Header extends Component {
               </div>
               <div>
               <label>Transaction deadline</label>
-              <a href="javascript:void(0)">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-              </a>
+              <OverlayTrigger
+              placement="right"
+              overlay={
+              <Tooltip className="custom-tooltip">
+                Find a token by searching for its name or symbol or by pasting its address below.
+              </Tooltip>
+              }
+                  >
+          
+                  <a href="javascript:void(0)" class="question-mark">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                </a>
+              
+             </OverlayTrigger>
+             
               <div className="btn-wrap mb-0">
                 <button className="mr-8">
                   <input type="text" placeholder="2"></input>

@@ -1,6 +1,7 @@
 import React from 'react'
 import {Button,Modal} from 'react-bootstrap';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+
 import './EthSecondStep.scss'
 
 const EthSecondStep = (props) => {
