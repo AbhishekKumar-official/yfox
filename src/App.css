@@ -64,3 +64,27 @@ html {
 .btn.disabled, .btn:disabled{
   cursor: default !important;
 }
+.custom-tooltip{ 
+  position: relative; 
+  opacity: 1;
+}
+.custom-tooltip .tooltip-inner{
+    background: #285585;
+    border: 1px solid rgb(255, 159, 0);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px 0px;
+    color: rgb(195, 197, 203);
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: left;
+    width: 228px;
+    padding: 0.6rem 1rem;
+    line-height: 150%;
+    font-weight: 400;
+    opacity: 1;
+}
+.bs-tooltip-right .arrow::before{
+  border-right-color: rgb(255, 159, 0) !important;
+}
+.bs-tooltip-left .arrow::before{
+  border-left-color: rgb(255, 159, 0) !important;
+}
