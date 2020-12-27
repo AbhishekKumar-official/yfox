@@ -1,11 +1,11 @@
 import React from 'react'
 import {Button,Modal} from 'react-bootstrap';
 import './Common.scss'
-import matamask from '../../images/metamask.png'
-import walletConnectIcon from '../../images/walletConnectIcon.svg'
-import coinbaseWalletIcon from '../../images/coinbaseWalletIcon.svg'
-import fortmatic from '../../images/fortmatic.png'
-import portisIcon from '../../images/portisIcon.png'
+import ethicon from '../../images/eth-icon.png'
+import wethicon from '../../images/weth-icon.png'
+import daiicon from '../../images/dai-icon.png'
+import usdcicon from '../../images/usdc-icon.png'
+import usdticon from '../../images/usdt-icon.png'
 
 const CommonModal = (props) => {
 
@@ -15,15 +15,63 @@ const CommonModal = (props) => {
                 size="md"
                 aria-labelledby="contained-modal-title-vcenter"
                 centered
-                className="connectwallet-modal"
+                className="common-modal"
               >
                 <Modal.Header closeButton>
                   <Modal.Title id="contained-modal-title-vcenter">
-                  Common
+                  Select a token
+                <a href="javascript:void(0)" class="question-mark">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                </a>
                   </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                  BODY
+                <div className="modal-padding">
+                <input type="text" className="form-control" placeholder="Search name or paste address"></input>
+                <div className="common-bases">
+                    <div className="d-flex">
+                  <label>Common bases</label>
+                  <a href="javascript:void(0)" class="question-mark">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                </a>
+                </div>
+                <div className="d-flex button-wrap">
+                    <button className="selected">
+                    <img src={ethicon} />
+                        <h6>ETH</h6>
+                    </button>
+                    <button>
+                    <img src={wethicon} />
+                        <h6>WETH</h6>
+                    </button>
+                    <button>
+                    <img src={daiicon} />
+                        <h6>DAI</h6>
+                    </button>
+                    <button>
+                    <img src={usdcicon} />
+                        <h6>USDC</h6>
+                    </button>
+                    <button>
+                    <img src={usdticon} />
+                        <h6>USDT</h6>
+                    </button>
+                </div>
+                </div>
+                <div className="token-toggle">
+                  <label>Token Name</label>
+                  <a href="javascript:void(0)" className="toggle-switch">
+                  ↓
+                  </a>
+                </div>
+                </div>
+                <ul>
+                  <li>
+                  <img src={ethicon} className="etch-icon" />
+                                  <span>ETH</span>
+                  </li>
+                </ul>
+                <a href="javascript:void(0)" className="select-list">Select a list</a>
                 </Modal.Body>
               </Modal>
             );
