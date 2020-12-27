@@ -28,8 +28,8 @@ const EthSecondStep = (props) => {
                   <OverlayTrigger
                   placement="right"
                   overlay={
-                  <Tooltip>
-                      Tooltip on <strong>Top</strong>.
+                  <Tooltip className="custom-tooltip">
+                      Token lists are an open specification for lists of ERC20 tokens. You can use any token list by entering its URL below. Beware that third party token lists can contain fake or malicious ERC20 tokens.
                   </Tooltip>
                   }
                       >
