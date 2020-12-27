@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Navbar,Nav,Button,FormControl,NavDropdown,Form,Dropdown,Popover,OverlayTrigger } from 'react-bootstrap';
-import DropdownButton from 'react-bootstrap/DropdownButton'
 import ConnectToAWalletModal from "../Modals/ConnectToAWalletModal"
+
 import logo from "../../images/logo.png"
 import Overlay from 'react-bootstrap/Overlay'
 import {NavLink} from "react-router-dom"
@@ -84,7 +84,7 @@ class Header extends Component {
                 <Dropdown.Item href="#/action-1">About</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            </Form>
+              </Form>
           </Navbar.Collapse>
         </Navbar>
         <Overlay
@@ -97,14 +97,53 @@ class Header extends Component {
           trigger='hover'
         >
           <Popover id="popover-contained">
+            <Popover.Title as="h3">Transaction Settings</Popover.Title>
+            <Popover.Content>
+              <div>
+              <label>Slippage tolerance</label>
+              <a href="javascript:void(0)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              </a>
+              </div>
+              <div className="btn-wrap">
+                <button className="active">0.1%</button>
+                <button>0.5%</button>
+                <button>1%</button>
+                <button>
+                  <input type="text" placeholder="0.00"></input>
+                  %</button>
+              </div>
+              <div>
+              <label>Transaction deadline</label>
+              <a href="javascript:void(0)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              </a>
+              <div className="btn-wrap mb-0">
+                <button className="mr-8">
+                  <input type="text" placeholder="2"></input>
+                </button>
+                minutes
+              </div>
+              </div>
+            </Popover.Content>
+          </Popover>
+        </Overlay>
+        <Overlay
+          show={show_t}
+          onHide={this.handleHide_t}
+          rootClose={show_t}	
+          target={target_t}
+          placement="bottom"
+          containerPadding={20}
+        >
+          <Popover id="popover-contained">
             <Popover.Title as="h3">Popover bottom</Popover.Title>
             <Popover.Content>
               <strong>Holy guacamole!</strong> Check this info.
             </Popover.Content>
           </Popover>
         </Overlay>
-       
-     
+
         <ConnectToAWalletModal show={modalVisible} onHide={() => this.setState({modalVisible:false})}/>
    </div>
       )
