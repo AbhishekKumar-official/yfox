@@ -48,7 +48,10 @@ html {
 .btn-yellow:focus,
 .btn-yellow.btn-primary:not(:disabled):not(.disabled).active:focus,
 .btn-yellow.btn-primary:not(:disabled):not(.disabled):active:focus,
-.show > .btn-yellow.btn-primary.dropdown-toggle:focus {
+.show > .btn-yellow.btn-primary.dropdown-toggle:focus, 
+.btn-yellow.btn-primary:not(:disabled):not(.disabled).active, 
+.btn-yellow.btn-primary:not(:disabled):not(.disabled):active, 
+.show>.btn-yellow.btn-primary.dropdown-toggle {
   outline: none;
   background-color: rgb(86, 90, 105);
   border-color: rgb(86, 90, 105);
@@ -185,3 +188,28 @@ html {
   align-items: center;
 }
 .mr-8{ margin-right: 8px !important; }
+.dropdown-toggle::after{ display: none; }
+.dropdown .dropdown-menu{
+  right: 0;
+  left: auto;
+  top: 57px;
+  padding: 0;
+}
+.dropdown .dropdown-item{
+  min-width: 130px;
+    background-color: rgb(255, 159, 0);
+    box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 1px, rgba(0, 0, 0, 0.04) 0px 4px 8px, rgba(0, 0, 0, 0.04) 0px 16px 24px, rgba(0, 0, 0, 0.01) 0px 24px 32px;
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    font-size: 1rem;
+    position: absolute;
+    right: 0rem;
+    z-index: 100;
+    color: #fff;
+    font-weight: 500;
+    width: auto;
+    height: 68px;
+    align-items: center;
+}
+.dropdown .dropdown-item svg{ margin-right: 8px; }
