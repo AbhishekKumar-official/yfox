@@ -8,6 +8,7 @@ body {
     rgba(255, 159, 0, 0.1) 0%,
     rgba(33, 36, 41, 0) 100%
   );
+  font-family: 'Inter', sans-serif;
 }
 html {
   color: rgb(255, 255, 255);
@@ -223,3 +224,4 @@ html {
     align-items: center;
 }
 .dropdown .dropdown-item svg{ margin-right: 8px; }
+.modal-header .close{ text-shadow: none; }
