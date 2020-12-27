@@ -53,6 +53,7 @@ html {
   background-color: rgb(86, 90, 105);
   border-color: rgb(86, 90, 105);
   box-shadow: none;
+  color: #fff;
 }
 .btn-yellow svg {
   height: 20px;
