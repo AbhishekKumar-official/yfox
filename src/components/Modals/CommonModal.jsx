@@ -8,6 +8,7 @@ import fortmatic from '../../images/fortmatic.png'
 import portisIcon from '../../images/portisIcon.png'
 
 const CommonModal = (props) => {
+
     return (
               <Modal
                 {...props}
@@ -18,35 +19,11 @@ const CommonModal = (props) => {
               >
                 <Modal.Header closeButton>
                   <Modal.Title id="contained-modal-title-vcenter">
-                  Connect to a wallet
+                  Common
                   </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                  <span>
-                    <button>
-                      <h6>Install Metamask</h6>
-                      <img src={matamask} />
-                    </button>
-                    <button>
-                      <h6>WalletConnect</h6>
-                      <img src={walletConnectIcon} />
-                    </button>
-                    <button>
-                      <h6>Coinbase Wallet</h6>
-                      <img src={coinbaseWalletIcon} />
-                    </button>
-                    <button>
-                      <h6>Fortmatic</h6>
-                      <img src={fortmatic} />
-                    </button>
-                    <button>
-                      <h6>Portis</h6>
-                      <img src={portisIcon} />
-                    </button>
-                  </span>
-                  <p>New to Ethereum?&nbsp;&nbsp;
-                  <a target="_blank" href="javascript:void(0)">Learn more about wallets</a>
-                  </p>
+                  BODY
                 </Modal.Body>
               </Modal>
             );

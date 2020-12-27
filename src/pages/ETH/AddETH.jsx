@@ -5,6 +5,7 @@ import { OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
 import advimg2 from '../../images/adv-2.png'
 import ConnectToAWalletModal from "../../components/Modals/ConnectToAWalletModal"
 import EthAndSelectModal from "../../components/Modals/EthAndSelectModal"
+import CommonModal from "../../components/Modals/CommonModal"
 
 import './AddETH.scss'
 import { Link } from 'react-router-dom'
@@ -14,7 +15,9 @@ class AddETH extends Component {
         super(props)
     
         this.state = {
-            modalVisible:false
+            modalVisible:false,
+            commonModal:false,
+            commonModal_t:false,
         }
     }
     handleOpenModal = () => {
@@ -22,8 +25,18 @@ class AddETH extends Component {
           modalVisible:true
         })
       }
+      handleCommon = () => {
+        this.setState({
+            commonModal:true
+        })
+      }
+      handleCommon_t = () => {
+        this.setState({
+            commonModal_t:true
+        })
+      }
     render() {
-        const {modalVisible} = this.state
+        const {modalVisible,commonModal,commonModal_t} = this.state
         return (
             <div className="addETH-container">
                 <div className="adv-img-container">
@@ -59,7 +72,7 @@ class AddETH extends Component {
                             <div className="d-flex align-items-center">
                                 <input type="text" className="form-control" placeholder="0.0"></input>
                                <div className="btn-dropdown-wrap">
-                               <button className="btn-dropdown-from">
+                               <button  onClick={this.handleCommon} className="btn-dropdown-from">
                                     <img src={ethicon} className="etch-icon" />
                                     <span>ETH</span>
                                     <svg width="12" height="7" viewBox="0 0 12 7" fill="none" class="sc-eKZiaR bwyinG"><path d="M0.97168 1L6.20532 6L11.439 1" stroke="#AEAEAE"></path></svg>
@@ -74,7 +87,7 @@ class AddETH extends Component {
                             <label>Input</label>
                             <div className="d-flex align-items-center">
                                 <input type="text" className="form-control" placeholder="0.0"></input>
-                                <button className="btn btn-token">
+                                <button onClick={this.handleCommon_t} className="btn btn-token">
                                         Select a Token
                                         <svg width="12" height="7" viewBox="0 0 12 7" fill="none" class="sc-eKZiaR bwyinG"><path d="M0.97168 1L6.20532 6L11.439 1" stroke="#AEAEAE"></path></svg>
                                         </button>
@@ -92,6 +105,8 @@ class AddETH extends Component {
                     <span>&nbsp;</span>
                 </a>
                 <ConnectToAWalletModal show={modalVisible} onHide={() => this.setState({modalVisible:false})} />
+                <CommonModal show={commonModal} onHide={() => this.setState({commonModal:false})}/>
+                <CommonModal show={commonModal_t} onHide={() => this.setState({commonModal_t:false})}/>
             </div>
         )
     }
