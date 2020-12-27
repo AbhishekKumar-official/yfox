@@ -23,7 +23,7 @@
 }
 
 .navbar a.navbar-brand {
-  width: 11%;
+  width: 9%;
 }
 
 .navbar a.navbar-brand img {
@@ -51,4 +51,5 @@
   color: white;
   font-weight: 600;
 }
+
 /*# sourceMappingURL=Header.component.css.map */
