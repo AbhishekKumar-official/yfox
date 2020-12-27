@@ -23,8 +23,8 @@ const EthAndSelectModal = (props) => {
                 <OverlayTrigger
                 placement="right"
                 overlay={
-                <Tooltip>
-                    Tooltip on <strong>Top</strong>.
+                <Tooltip className="custom-tooltip">
+                  Find a token by searching for its name or symbol or by pasting its address below.
                 </Tooltip>
                 }
                     >
