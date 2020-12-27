@@ -37,7 +37,7 @@ class Pool extends Component {
                             Connect to a wallet to view your liquidity.
                             </div>
                             <div className="liquidity-row-3">
-                            Don't see a pool you joined?
+                            Don't see a pool you joined?&nbsp;
                             <Link to="/find" id="import-pool-link">Import it.</Link>
                             </div>
                         </div>
