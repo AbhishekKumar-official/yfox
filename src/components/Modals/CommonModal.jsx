@@ -6,7 +6,7 @@ import wethicon from '../../images/weth-icon.png'
 import daiicon from '../../images/dai-icon.png'
 import usdcicon from '../../images/usdc-icon.png'
 import usdticon from '../../images/usdt-icon.png'
-
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 const CommonModal = (props) => {
 
     return (
@@ -20,9 +20,21 @@ const CommonModal = (props) => {
                 <Modal.Header closeButton>
                   <Modal.Title id="contained-modal-title-vcenter">
                   Select a token
-                <a href="javascript:void(0)" class="question-mark">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                </a>
+                  <OverlayTrigger
+                  placement="right"
+                  overlay={
+                  <Tooltip>
+                      Tooltip on <strong>Top</strong>.
+                  </Tooltip>
+                  }
+                      >
+              
+                      <a href="javascript:void(0)" class="question-mark">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    </a>
+                  
+                 </OverlayTrigger>
+ 
                   </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -31,9 +43,20 @@ const CommonModal = (props) => {
                 <div className="common-bases">
                     <div className="d-flex">
                   <label>Common bases</label>
-                  <a href="javascript:void(0)" class="question-mark">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                </a>
+                  <OverlayTrigger
+                  placement="right"
+                  overlay={
+                  <Tooltip>
+                      Tooltip on <strong>Top</strong>.
+                  </Tooltip>
+                  }
+                      >
+              
+                      <a href="javascript:void(0)" class="question-mark">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    </a>
+                  
+                 </OverlayTrigger>
                 </div>
                 <div className="d-flex button-wrap">
                     <button className="selected">
